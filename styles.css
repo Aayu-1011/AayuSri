@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.sidebar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+.vertical-text {
+    writing-mode: horizontal-tb;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 8px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default desktop grid with 3 columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #e3e3e3);
+    color: #000;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ff6347;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+    transform: rotate(20deg);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card p span {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 15px 0;
+    }
+
+    .vertical-text {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr; /* One card per row for phones */
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+}
